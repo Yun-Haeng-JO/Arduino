@@ -1,0 +1,16 @@
+#include <MsTimer2.h>
+
+void setup() {
+    Serial.begin(9600);
+    MsTimer2::set(1000, controlMotors); // 1000ms(1초)마다 controlMotors 함수를 호출
+    MsTimer2::start();
+}
+
+void loop() {
+    // 다른 작업 수행
+}
+
+void controlMotors() {
+    // 모터 제어 코드
+    Serial.println("Motors controlled!");
+}
